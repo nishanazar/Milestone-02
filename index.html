@@ -1,82 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hackthon</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <h1>Static Resume builder by Nisha Nazar</h1>
-    <form id="resumeForm">
-        
-      <fieldset>
-        <legend><h2>Personal Information</h2></legend>
-        <img src="images (1).png" alt="profile-pic" class="profile-pic" />
-        <label>Name:</label>
-        <input
-          
-          type="text"
-          id="name"
-          name="name"
-          placeholder="name" />
-       
-       
-        <br />
-        <br />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Static Resume Builder</h1>
 
-        <label>Email:</label>
-        <input
-         
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="email"
-        />
-        <br />
-        <br />
+  <!-- Form to capture user input -->
+  <form id="resumeForm">
+    <h3>Personal Information</h3>
+    <input type="text" id="name" placeholder="Full Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="text" id="address" placeholder="Address" />
+    <input type="text" id="phone" placeholder="Phone Number" required />
+    <input type="file" id="profilePicture" />
 
-        <label>Phone:</label>
-        <input
-       
-          type="tel"
-          id="phone"
-          name="phone"
-          required
-          placeholder="phone Number"
-        />
-        <br />
-        <br />
-        <fieldset>
-        <legend>Education</legend>
-    
-        <textarea name="education" rows="3" required></textarea>
-        </fieldset>
-        <br />
-        <fieldset>
-        <legend>Work Experience</legend>
-    
-        <textarea
-        
-          name="Experience"
-          rows="3"
-          required
-        ></textarea>
-        </fieldset>
-        <br />
-      <fieldset>
-        <legend>Skills</legend>
-      
+    <h3>Education</h3>
+    <textarea id="education" placeholder="Enter your education details" required></textarea>
 
-      
-        <textarea  name="Skills" rows="3" required></textarea>
-      </fieldset>
-        <button type="submit">Generate Resume Below</button>
-    
-     
-    </form>
+    <h3>Work Experience</h3>
+    <textarea id="workExperience" placeholder="Enter your work experience" required></textarea>
 
-   
-  </body>
+    <h3>Skills</h3>
+    <textarea id="skills" placeholder="Enter your skills" required></textarea>
+
+    <button type="submit">Generate Resume</button>
+  </form>
+
+  <script src="index.js"></script>
+</body>
 </html>
